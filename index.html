@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Echec</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="rule_top">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+        </div>
+        <div class="rule_left">
+            <p>A</p>
+            <p>B</p>
+            <p>C</p>
+            <p>D</p>
+            <p>E</p>
+            <p>F</p>
+            <p>G</p>
+            <p>H</p>
+        </div>
+        <div class="chessboard">
+            <img id="black-rook-1" src="img/black_rook.png"></img>
+            <img id="black-rook-2" src="img/black_rook.png"></img>
+            <img id="black-knight-1" src="img/black_knight.png"></img>
+            <img id="black-knight-2" src="img/black_knight.png"></img>
+            <img id="black-bishop-1" src="img/black_bishop.png"></img>
+            <img id="black-bishop-2" src="img/black_bishop.png"></img>
+            <img id="black-king" src="img/black_king.png"></img>
+            <img id="black-queen" src="img/black_queen.png"></img>
+            <img id="black-pawn-1" onclick='moveBlackPawn1()' src="img/black_pawn.png"></img>
+            <img id="black-pawn-2" src="img/black_pawn.png"></img>
+            <img id="black-pawn-3" src="img/black_pawn.png"></img>
+            <img id="black-pawn-4" src="img/black_pawn.png"></img>
+            <img id="black-pawn-5" src="img/black_pawn.png"></img>
+            <img id="black-pawn-6" src="img/black_pawn.png"></img>
+            <img id="black-pawn-7" src="img/black_pawn.png"></img>
+            <img id="black-pawn-8" src="img/black_pawn.png"></img>
+
+            <img id="white-rook-1" src="img/white_rook.png"></img>
+            <img id="white-rook-2" src="img/white_rook.png"></img>
+            <img id="white-knight-1" src="img/white_knight.png"></img>
+            <img id="white-knight-2" src="img/white_knight.png"></img>
+            <img id="white-bishop-1" src="img/white_bishop.png"></img>
+            <img id="white-bishop-2" src="img/white_bishop.png"></img>
+            <img id="white-king" src="img/white_king.png"></img>
+            <img id="white-queen" src="img/white_queen.png"></img>
+            <img id="white-pawn-1" src="img/white_pawn.png"></img>
+            <img id="white-pawn-2" src="img/white_pawn.png"></img>
+            <img id="white-pawn-3" src="img/white_pawn.png"></img>
+            <img id="white-pawn-4" src="img/white_pawn.png"></img>
+            <img id="white-pawn-5" src="img/white_pawn.png"></img>
+            <img id="white-pawn-6" src="img/white_pawn.png"></img>
+            <img id="white-pawn-7" src="img/white_pawn.png"></img>
+            <img id="white-pawn-8" src="img/white_pawn.png"></img>
+        </div>
+    </div>
+
+    <script>
+        function moveBlackPawn1() {
+            var blackPawn1 = document.getElementById("black-pawn-1");
+            console.log('gridArea:', blackPawn1.style.gridArea);
+
+            if (blackPawn1.style.gridArea.length == 0) {
+                blackPawn1.style.gridArea = 'D1';
+            }
+            else if (blackPawn1.style.gridArea == 'D1') {
+                blackPawn1.style.gridArea = 'E1';
+            }
+            else if (blackPawn1.style.gridArea == 'E1') {
+                blackPawn1.style.gridArea = 'F1';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
